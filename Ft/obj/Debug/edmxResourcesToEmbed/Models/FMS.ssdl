@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EmployeeInformations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="E_Designation" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="JoiningDate" Type="date" Nullable="false" />
+    <Property Name="ContactYear" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fitnesses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="f_Percentage" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="InjuryStatus" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="OverallRating" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Players">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Nationality" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Position" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="GoalScored" Type="int" />
+    <Property Name="Assist" Type="int" />
+    <Property Name="FitnessId" Type="int" Nullable="false" />
+    <Property Name="SalaryId" Type="int" Nullable="false" />
+    <Property Name="JoiningDate" Type="date" Nullable="false" />
+    <Property Name="ContactYear" Type="date" Nullable="false" />
+    <Property Name="Dob" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Salaries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="SalaryGrade" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Bonus" Type="int" />
+    <Property Name="SalaryStatus" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="FMSModelStoreContainer">
+    <EntitySet Name="EmployeeInformations" EntityType="Self.EmployeeInformations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fitnesses" EntityType="Self.Fitnesses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Players" EntityType="Self.Players" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Salaries" EntityType="Self.Salaries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

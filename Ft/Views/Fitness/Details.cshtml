@@ -1,0 +1,42 @@
+﻿@model Ft.Models.Fitness
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Fitness</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.f_Percentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.f_Percentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InjuryStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InjuryStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OverallRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OverallRating)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
